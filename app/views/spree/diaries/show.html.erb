@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @spree_diary.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @spree_diary.body %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @spree_diary.order_id %>
+</p>
+
+<%= link_to 'Edit', edit_spree_diary_path(@spree_diary) %> |
+<%= link_to 'Back', spree_diaries_path %>
