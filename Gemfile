@@ -68,3 +68,5 @@ gem 'jquery-rails'
 gem 'coffee-rails'
 
 gem 'figaro'
+
+gem 'therubyracer', platforms: :ruby
