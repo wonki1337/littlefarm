@@ -66,3 +66,5 @@ gem 'jquery-rails'
 
 
 gem 'coffee-rails'
+
+gem 'figaro'

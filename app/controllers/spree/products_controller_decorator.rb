@@ -1,6 +1,6 @@
 module Spree
   module Admin
-    class ProductsController < ResourceController
+    class Spree::ProductsControllerDecorator < ResourceController
 
 
             def add_detail
