@@ -62,6 +62,6 @@ Rails.application.configure do
   
   config.hosts << "66e4a80ffbfa4cd5b17662ab5baace1b.vfs.cloud9.ap-northeast-1.amazonaws.com"
   
-  
+  config.require_master_key = true
   
 end
