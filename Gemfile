@@ -69,4 +69,4 @@ gem 'coffee-rails'
 
 gem 'figaro'
 
-#gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
