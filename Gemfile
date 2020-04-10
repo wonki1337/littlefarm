@@ -64,9 +64,10 @@ gem 'simple_form'
 gem 'summernote-rails', '~> 0.8.12.0'
 gem 'jquery-rails'
 
+gem 'carrierwave'
 
 gem 'coffee-rails'
 
 gem 'figaro'
 
-gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer', platforms: :ruby
