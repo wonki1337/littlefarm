@@ -62,6 +62,8 @@ gem 'spree_editor', github: 'spree-contrib/spree_editor'
 
 gem 'jquery-rails'
 
+gem 'carrierwave'
+
 gem 'coffee-rails'
 
 gem 'figaro'
