@@ -51,7 +51,7 @@ group :test do
 end
 
 group :production do
-  gem 'therubyracer', platforms: :ruby
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -72,3 +72,4 @@ gem 'coffee-rails'
 
 gem 'figaro'
 
+gem 'therubyracer', platforms: :ruby
