@@ -60,7 +60,6 @@ gem 'spree_gateway', '~> 3.7'
 
 gem 'spree_editor', github: 'spree-contrib/spree_editor'
 
-gem 'summernote-rails', '~> 0.8.12.0'
 gem 'jquery-rails'
 
 gem 'coffee-rails'
