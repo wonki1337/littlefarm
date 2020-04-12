@@ -93,6 +93,8 @@ Rails.application.configure do
   config.require_master_key = true
   
   config.public_file_server.enabled = false
+  
+  Rails.application.config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
