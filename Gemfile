@@ -73,3 +73,4 @@ gem 'coffee-rails'
 gem 'figaro'
 
 gem 'therubyracer', platforms: :ruby
+gem 'mini_racer'
