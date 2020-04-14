@@ -69,3 +69,5 @@ gem 'coffee-rails'
 gem 'figaro'
 
 gem 'mini_racer', platforms: :ruby
+
+gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher

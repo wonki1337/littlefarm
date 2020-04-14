@@ -11,14 +11,14 @@
       </dt>
       <dd class="account-page-user-info-item-definition"><%= @user.email %></dd>
 
-      <div class="d-lg-inline-block account-page-user-info-item-store-credits">
-        <p class="my-0 text-uppercase text-center">
-          <%= Spree.t(:store_credit_name) %>: <b class="account-page-user-info-item-store-credits-amount"><%= Spree::Money.new(@user.total_available_store_credit).to_s.gsub('.00', '') %></b>
-        </p>
-      </div>
+      <!--<div class="d-lg-inline-block account-page-user-info-item-store-credits">-->
+      <!--  <p class="my-0 text-uppercase text-center">-->
+      <!--    <%= Spree.t(:store_credit_name) %>: <b class="account-page-user-info-item-store-credits-amount"><%= Spree::Money.new(@user.total_available_store_credit).to_s.gsub('.00', '') %></b>-->
+      <!--  </p>-->
+      <!--</div>-->
     </div>
     <div class="col-xs-12 col-lg-8 mt-sm-5 mt-lg-0">
-      <%= link_to Spree.t(:add_new_address), spree.new_address_path, class: 'account-page-new-address-link', method: :get %>
+      <%= link_to "새 주소 입력하기", spree.new_address_path, class: 'account-page-new-address-link', method: :get %>
 
       <div class="row">
         <% @user.addresses.each_with_index do |address, index| %>
@@ -39,7 +39,7 @@
 
   <div data-hook="account_my_orders" class="account-page-orders" id="account-my-orders">
 
-    <h3 class="text-uppercase spree-mb-medium spree-mt-medium spree-header" ><%= Spree.t(:my_orders) %></h3>
+    <h3 class="text-uppercase spree-mb-medium spree-mt-medium spree-header" >구매내역</h3>
     <% if @orders.present? %>
       <table>
         <thead class="active">

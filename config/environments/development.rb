@@ -64,4 +64,8 @@ Rails.application.configure do
   
   config.require_master_key = true
   
+  config.i18n.available_locales = :ko
+  
+  I18n.locale = :es
+  
 end
