@@ -66,6 +66,11 @@ Rails.application.configure do
   
   config.i18n.available_locales = :ko
   
-  I18n.locale = :es
+  I18n.locale = :ko
   
+end
+
+Iamport.configure do |config|
+  config.api_key = "API_KEY"
+  config.api_secret = "API_SECRET"
 end

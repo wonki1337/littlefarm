@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
- 
+get '/import' => "spree/home#import"
   
 get '/introduce' => "spree/home#introduce"
 get '/samplediary' => "spree/home#samplediary"
