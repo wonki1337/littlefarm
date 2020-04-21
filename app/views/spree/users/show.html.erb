@@ -1,5 +1,5 @@
 <div class="container account-page">
-  <h3 class="text-uppercase spree-mb-large spree-mt-large spree-header" ><%= accurate_title %></h3>
+  <h3 class="text-uppercase spree-mb-large spree-mt-large spree-header" >내 정보</h3>
 
   <div class="row">
     <div class="col-xs-12 col-lg-4">
@@ -44,12 +44,12 @@
       <table>
         <thead class="active">
           <tr>
-            <th class="text-uppercase text-secondary account-page-order-number"><%= Spree::Order.human_attribute_name(:number) %></th>
-            <th class="text-uppercase text-secondary account-page-order-date"><%= Spree.t(:date) %></th>
-            <th class="text-uppercase text-secondary account-page-order-status"><%= Spree.t(:status) %></th>
-            <th class="text-uppercase text-secondary account-page-order-payment-state"><%= Spree.t(:payment_state) %></th>
-            <th class="text-uppercase text-secondary account-page-order-shipment-state"><%= Spree.t(:shipment_state) %></th>
-            <th class="text-uppercase text-secondary account-page-order-total"><%= Spree.t(:total) %></th>
+            <th class="text-uppercase text-secondary account-page-order-number">구매코드</th>
+            <th class="text-uppercase text-secondary account-page-order-date">구매일</th>
+            <th class="text-uppercase text-secondary account-page-order-status">상태</th>
+            <!--<th class="text-uppercase text-secondary account-page-order-payment-state"><%= Spree.t(:payment_state) %></th>-->
+            <!--<th class="text-uppercase text-secondary account-page-order-shipment-state"><%= Spree.t(:shipment_state) %></th>-->
+            <th class="text-uppercase text-secondary account-page-order-total">결제금액</th>
           </tr>
         </thead>
         <tbody>
@@ -58,8 +58,8 @@
               <td class="account-page-order-number"><%= link_to order.number, order_url(order), class: "text-primary" %></td>
               <td class="account-page-order-date"><%= l order.completed_at.to_date %></td>
               <td class="account-page-order-status"><%= Spree.t("order_state.#{order.state}").titleize %></td>
-              <td class="account-page-order-payment-state"><%= Spree.t("payment_states.#{order.payment_state}").titleize if order.payment_state %></td>
-              <td class="account-page-order-shipment-state"><%= Spree.t("shipment_states.#{order.shipment_state}").titleize if order.shipment_state %></td>
+              <!--<td class="account-page-order-payment-state"><%= Spree.t("payment_states.#{order.payment_state}").titleize if order.payment_state %></td>-->
+              <!--<td class="account-page-order-shipment-state"><%= Spree.t("shipment_states.#{order.shipment_state}").titleize if order.shipment_state %></td>-->
               <td class="account-page-text-primary account-page-order-total account-page-lead"><%= order.display_total %></td>
               <td class="account-page-arrow-container" data-order-path="<%= spree.order_path(order) %>">
                 <%= link_to '', spree.order_path(order), { class: "account-page-order-arrow" } %>

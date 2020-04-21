@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-get '/import' => "spree/checkout#import"
-  
 get '/introduce' => "spree/home#introduce"
 get '/samplediary' => "spree/home#samplediary"
 # get 'admin/orders/#{order.id}/diaries/#{id}' => 'admin_orders_diaries_path'
