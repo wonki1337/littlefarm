@@ -41,8 +41,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   
-  gem 'httparty'
-  gem 'iamport'
   
 end
 
@@ -73,5 +71,3 @@ gem 'coffee-rails'
 gem 'figaro'
 
 gem 'mini_racer', platforms: :ruby
-
-gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
