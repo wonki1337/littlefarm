@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-get '/naver072a084090e5defb8e32b6ac8e241188' => "spree/home#naver072a084090e5defb8e32b6ac8e241188"
+  #get '/naver072a084090e5defb8e32b6ac8e241188' => "spree/home#naver072a084090e5defb8e32b6ac8e241188"
 get '/import' => "spree/checkout#import"
   
 get '/introduce' => "spree/home#introduce"
