@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-get 'naver072a084090e5defb8e32b6ac8e241188' => "spree/home#naver072a084090e5defb8e32b6ac8e241188"
-
 get '/introduce' => "spree/home#introduce"
 get '/samplediary' => "spree/home#samplediary"
 # get 'admin/orders/#{order.id}/diaries/#{id}' => 'admin_orders_diaries_path'
