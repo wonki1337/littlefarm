@@ -1,7 +1,7 @@
 <div class="checkout-content-summary">
-  <h3 class="text-uppercase text-center checkout-content-summary-header"><%= Spree.t(:order_summary) %></h3>
+  <h3 class="text-uppercase text-center checkout-content-summary-header">최종 결제금액</h3>
   <div class="w-100 text-uppercase checkout-content-summary-table" data-hook="order_summary">
-    <div class="d-table-cell"><%= Spree.t(:subtotal) %>:</div>
+    <div class="d-table-cell">금액:</div>
     <div class="d-table-cell text-right"><%= order.display_item_total.to_html %></div>
 
     <% if order.line_item_adjustments.nonzero.exists? %>
@@ -27,7 +27,7 @@
     <% end %>
 
     <% if order.passed_checkout_step?("address") && order.shipments.any? %>
-      <div class="d-table-cell"><%= Spree.t(:shipping) %>:</div>
+      <div class="d-table-cell">배송비:</div>
       <% shipping_total = Spree::Money.new(order.shipments.to_a.sum(&:cost), currency: order.currency) %>
       <div class="d-table-cell text-right"
            data-hook='shipping-total'
@@ -60,7 +60,7 @@
     <% end %>
 
     <div class="checkout-content-summary-table-order-total">
-      <div class="d-table-cell"><%= Spree.t(:total) %>:</div>
+      <div class="d-table-cell">총 결제액:</div>
       <div class="d-table-cell text-right">
         <span id='summary-order-total' data-currency="<%= Money::Currency.find(order.currency).symbol %>">
           <%= order.display_total.to_html %>

@@ -1,8 +1,5 @@
  <!DOCTYPE html>
 <html>
- 
- 
- 
  <!-- jQuery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
   <!-- iamport.payment.js -->
@@ -19,19 +16,28 @@
     pay_method : 'card',
     merchant_uid : 'merchant_' + new Date().getTime(),
     name : '주문명:결제테스트',
-    amount : 14000,
-    buyer_email : 'iamport@siot.do',
-    buyer_name : '구매자이름',
-    buyer_tel : '010-1234-5678',
-    buyer_addr : '서울특별시 강남구 삼성동',
-    buyer_postcode : '123-456'
+    amount : ' <%= @order.display_total %>',
+    buyer_email : '<%= @order.email %>',
+    
+    buyer_name : '<%= @order.ship_address.firstname %><%= @order.ship_address.lastname %>',
+    buyer_tel : '<%= @order.ship_address.phone %>',
+    buyer_addr : '<%= sanitize @order.ship_address.to_s %>',
+    buyer_postcode : '<%= @order.ship_address.zipcode %>'
 }, function(rsp) {
     if ( rsp.success ) {
+        // jQuery.ajax({
+        //             url: "/orders/complete", //cross-domain error가 발생하지 않도록 주의해주세요
+        //             type: 'POST',
+        //             dataType: 'json',
+                    
         var msg = '결제가 완료되었습니다.';
         msg += '고유ID : ' + rsp.imp_uid;
         msg += '상점 거래ID : ' + rsp.merchant_uid;
         msg += '결제 금액 : ' + rsp.paid_amount;
         msg += '카드 승인번호 : ' + rsp.apply_num;
+        
+        //  msg += <#%= @order.approver_id %> + rsp.imp_uid;
+        
     } else {
         var msg = '결제에 실패하였습니다.';
         msg += '에러내용 : ' + rsp.error_msg;
@@ -39,6 +45,6 @@
 
     alert(msg);
 });
+
   </script>
-  
 </html>
