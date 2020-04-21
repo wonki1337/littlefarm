@@ -3,14 +3,8 @@
   <br>
   결제 신청 후 3일 이내에 입금해주세요!
 </div>
-
 <br>
-
-
-
 <%= form_with model: @order.payment_name do |form| %>
-      
     <%= form.text_field :payment_name, class: 'form-control', required: true, placeholder: "입금자 명을 적어주세요" %>
-    
-      <%= form.submit "저장", class: 'btn btn-primary btn-block spree-btn mb-5' %>
+    <%= form.submit "저장", class: 'btn btn-primary btn-block spree-btn mb-5' %>
 <% end %>
