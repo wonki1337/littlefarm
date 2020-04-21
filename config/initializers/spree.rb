@@ -33,5 +33,3 @@ Spree.user_class = "Spree::User"
 Spree.config do |config|
   config.logo = 'my_new_logo.png'
 end
-
-Rails.application.config.spree.payment_methods << Spree::Gateway::Import
