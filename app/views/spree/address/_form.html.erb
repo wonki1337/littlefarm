@@ -3,13 +3,13 @@
 <div class="inner" data-hook=<%="#{address_type}_inner" %>>
   <p class="form-group" id=<%="#{address_id}firstname" %>>
     <%= form.label :firstname do %>
-      <%= Spree.t(:first_name) %><abbr class="required" title="required">*</abbr>
+      성<abbr class="required" title="required">*</abbr>
     <% end %>
     <%= form.text_field :firstname, class: 'form-control', required: true, placeholder: "성" %>
   </p>
   <p class="form-group" id=<%="#{address_id}lastname" %>>
     <%= form.label :lastname do %>
-      <%= Spree.t(:last_name) %><abbr class="required" title="required">*</abbr>
+      이름<abbr class="required" title="required">*</abbr>
     <% end %>
     <%= form.text_field :lastname, class: 'form-control', required: true, placeholder: "이름" %>
   </p>
@@ -21,17 +21,17 @@
   <% end %>
   <p class="form-group" id=<%="#{address_id}address1" %>>
     <%= form.label :address1 do %>
-      <%= Spree.t(:street_address) %><abbr class="required" title="required">*</abbr>
+      구/동<abbr class="required" title="required">*</abbr>
     <% end %>
     <%= form.text_field :address1, class: 'form-control required' %>
   </p>
   <p class="form-group" id=<%="#{address_id}address2" %>>
-    <%= form.label :address2, Spree.t(:street_address_2) %>
+    <%= form.label :address2, "상세주소") %>
     <%= form.text_field :address2, class: 'form-control' %>
   </p>
   <p class="form-group" id=<%="#{address_id}city" %>>
     <%= form.label :city do %>
-      <%= Spree.t(:city) %><abbr class="required" title="required">*</abbr>
+      도/시<abbr class="required" title="required">*</abbr>
     <% end %>
     <%= form.text_field :city, class: 'form-control', required: true %>
   </p>
@@ -72,13 +72,13 @@
 
   <p class="form-group" id=<%="#{address_id}zipcode" %>>
     <%= form.label :zipcode do %>
-      <%= Spree.t(:zip) %><% if address.require_zipcode? %><abbr class="required" title="required">*</abbr><% end %>
+      우편주소<% if address.require_zipcode? %><abbr class="required" title="required">*</abbr><% end %>
     <% end %>
     <%= form.text_field :zipcode, class: 'form-control', required: address.require_zipcode?, placeholder: "우편번호" %>
   </p>
   <p class="form-group" id=<%="#{address_id}phone" %>>
     <%= form.label :phone do %>
-      <%= Spree.t(:phone) %><% if address.require_phone? %><abbr class="required" title="required">*</abbr><% end %>
+      전화번호<% if address.require_phone? %><abbr class="required" title="required">*</abbr><% end %>
     <% end %>
     <%= form.phone_field :phone, class: 'form-control', required: address.require_phone?, placeholder: "휴대폰번호" %>
   </p>

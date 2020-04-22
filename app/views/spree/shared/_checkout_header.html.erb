@@ -7,7 +7,7 @@
                    classes: 'spree-icon-arrow spree-icon-arrow-left',
                    width: 7,
                    height: 14) %>
-          <span class="checkout-header-link-text"><%= Spree.t('checkout_page.back_to_cart') %></span>
+          <span class="checkout-header-link-text">장바구니로 돌아가기</span>
         <% end %>
 
         <%= link_to spree.cart_path, class: "d-sm-none text-uppercase", method: :get do %>
@@ -15,7 +15,7 @@
                    classes: 'spree-icon-arrow spree-icon-arrow-left',
                    width: 7,
                    height: 14) %>
-          <span class="checkout-header-link-text"><%= Spree.t('back') %></span>
+          <span class="checkout-header-link-text">이전</span>
         <% end %>
       </div>
       <div class="d-flex flex-nowrap align-items-center justify-content-center">
