@@ -11,7 +11,6 @@ class Spree::DiariesController < Spree::StoreController
   def index
     # @order = Spree::Order.find(params[:order_id])  
     @order = Spree::Order.find(params[:order_id])  
-   
     @diaries = @order.diaries
   end
 

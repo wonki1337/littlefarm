@@ -92,7 +92,7 @@ class Spree::Admin::DiariesController < Spree::OrdersController
         if @order.present?
           @spree_diary = @spree_order.posts.find(params[:id])
         else
-            @spree_diary = Spree::Diary.find(params[:id])
+          @spree_diary = Spree::Diary.find(params[:id])
         end
       end
         

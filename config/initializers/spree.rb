@@ -33,3 +33,8 @@ Spree.user_class = "Spree::User"
 Spree.config do |config|
   config.logo = 'my_new_logo.png'
 end
+
+
+Spree.config do |config|
+  config.address_requires_state = false
+end  
