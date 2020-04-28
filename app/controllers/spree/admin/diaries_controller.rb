@@ -32,13 +32,13 @@ class Spree::Admin::DiariesController < Spree::OrdersController
   # POST /spree/diaries
   # POST /spree/diaries.json
   def create
-      
-    @spree_diary = @spree_order.diaries.new(diary_params)
-    @spree_diary.save
+    
+    @spree_diary = @spree_order.diaries.new(spree_diary_params)
+  
 
 
     respond_to do |format|
-      if @diaries.save
+      if @spree_diary.save
         format.html { redirect_to admin_order_diaries_path, notice: 'Diary was successfully created.' }
         format.json { render :show, status: :created, location: @spree_diary }
       else
@@ -97,8 +97,8 @@ class Spree::Admin::DiariesController < Spree::OrdersController
       end
         
     
-    def diary_params
-        params.require(:spree_diary).permit(:title, :body, :order_id)
+    def spree_diary_params
+        params.require(:diary).permit(:title, :body, :order_id)
     end
 
     # Only allow a list of trusted parameters through.
