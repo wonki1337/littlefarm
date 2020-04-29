@@ -54,8 +54,8 @@ module Spree
           
           #슬랙 노티
               
-          notifier = Slack::Notifier.new (Rails.application.config.slack_webhook_url) 
-          notifier.ping '결제되었습니다！'
+          # notifier = Slack::Notifier.new (Rails.application.config.slack_webhook_url) 
+          # notifier.ping '결제되었습니다！'
                         
         else
           redirect_to checkout_state_path(@order.state)
