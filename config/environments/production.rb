@@ -95,6 +95,9 @@ Rails.application.configure do
   config.public_file_server.enabled = false
   
   config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+  
+  config.slack_webhook_url  =  ENV['https://hooks.slack.com/services/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']
+
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector

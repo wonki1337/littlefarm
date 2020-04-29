@@ -53,12 +53,9 @@ module Spree
           redirect_to completion_route
           
           #슬랙 노티
-          notifier = Slack::Notifier.new(
-                'https://hooks.slack.com/services/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',
-                channel: '#website',
-                username: 'wgwj1234',
-              )
-              notifier.ping '결제되었습니다！'
+              
+          notifier = Slack::Notifier.new (Rails.application.config.slack_webhook_url) 
+          notifier.ping '결제되었습니다！'
                         
         else
           redirect_to checkout_state_path(@order.state)
