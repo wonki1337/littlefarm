@@ -54,7 +54,7 @@ module Spree
           
           #슬랙 노티
           notifier = Slack::Notifier.new(
-                'https://hooks.slack.com/services/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',
+                'https://hooks.slack.com/services/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',
                 channel: '#website',
                 username: 'wgwj1234',
               )
