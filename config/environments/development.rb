@@ -68,5 +68,8 @@ Rails.application.configure do
   
   I18n.locale = :ko
   
+  
+  
+  
 end
 

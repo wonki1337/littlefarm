@@ -29,7 +29,8 @@ module Spree
 
     layout 'spree/layouts/checkout'
 
-
+    
+    
     def import
     end
     
@@ -50,8 +51,20 @@ module Spree
           @current_order = nil
           flash['order_completed'] = true
           redirect_to completion_route
+          
+          #슬랙 노티
+          notifier = Slack::Notifier.new(
+                'https://hooks.slack.com/services/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',
+                channel: '#website',
+                username: 'wgwj1234',
+              )
+              notifier.ping '결제되었습니다！'
+                        
         else
           redirect_to checkout_state_path(@order.state)
+  
+        
+       
         end
       else
         render :edit

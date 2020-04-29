@@ -71,3 +71,5 @@ gem 'coffee-rails'
 gem 'figaro'
 
 gem 'mini_racer', platforms: :ruby
+
+gem 'slack-notifier'
