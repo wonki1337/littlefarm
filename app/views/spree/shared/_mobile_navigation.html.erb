@@ -1,0 +1,53 @@
+<% if spree_navigation_data.any? %>
+  <div class="position-fixed text-uppercase d-xl-none mobile-navigation">
+    <div class="d-flex align-items-center header-spree" data-hook>
+      <div class="container-fluid header-spree-fluid">
+        <div class="d-flex flex-nowrap align-items-center">
+          <div class="d-xl-none flex-grow-1">
+            <button id="mobile-navigation-back-button" aria-label="<%= Spree.t('nav_bar.go_to_previous_menu') %>">
+              <%= icon(name: 'arrow-right',
+                      classes: 'd-sm-none spree-icon-arrow spree-icon-arrow-left',
+                      width: 18,
+                      height: 18) %>
+              <%= icon(name: 'arrow-right',
+                      classes: 'd-none d-sm-inline spree-icon-arrow spree-icon-arrow-left',
+                      width: 17,
+                      height: 28) %>
+            </button>
+          </div>
+          <figure class="logo flex-grow-0 flex-xl-grow-1 order-xl-0 header-spree-fluid-logo" data-hook>
+            <%= logo %>
+          </figure>
+          <div id="top-nav-bar-mobile" class="text-right flex-grow-1 header-spree-fluid-secondary-navigation" data-hook>
+            <button id="mobile-navigation-close-button" aria-label="<%= Spree.t('nav_bar.close_menu') %>">
+              <%= icon(name: 'close',
+                      classes: 'd-sm-none',
+                      width: 17,
+                      height: 17) %>
+              <%= icon(name: 'close',
+                      classes: 'd-none d-sm-inline',
+                      width: 26,
+                      height: 26) %>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="list-unstyled position-relative h-100 mobile-navigation-list">
+       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+           <%= link_to "사용설명서", "/introduce", class: 'w-75' %>
+        </li>
+    
+    
+       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+           <%= link_to "재배일지", "/samplediary", class: 'w-75' %>
+        </li>
+      
+        <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+           <%= link_to "농장임대", "/t/categories/flower", class: 'w-75' %>
+        </li>
+      
+    </ul>
+  </div>
+<% end %>

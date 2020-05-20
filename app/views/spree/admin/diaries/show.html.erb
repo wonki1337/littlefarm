@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @spree_diary.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @spree_diary.body %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @spree_diary.order_id %>
+</p>
+
+<td><%= link_to '삭제하기', admin_order_diary_path, method: :delete, data: { confirm: '진짜로?' } %></td>
+
+<%= link_to '뒤로가기', admin_order_diaries_path %>

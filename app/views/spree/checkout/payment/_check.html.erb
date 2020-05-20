@@ -1,0 +1,12 @@
+<div>
+  계좌 : 국민은행 009901-04-157261(박원기)
+  <br>
+  결제 신청 후 3일 이내에 입금 완료해주세요
+  *카드결제는 pg사 심사중으로 2~3주 후에 결제가능합니다
+</div>
+<br>
+<%= form_with model: @order.payment_name do |form| %>
+    <%= form.text_field :payment_name, class: 'form-control', required: true, placeholder: "입금자 명을 적어주세요" %>
+  <br>
+    <%= form.submit "결제", class: 'btn btn-primary btn-block spree-btn mb-5' %>
+<% end %>

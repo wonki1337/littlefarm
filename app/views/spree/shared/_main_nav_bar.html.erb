@@ -1,0 +1,19 @@
+<% if spree_navigation_data.any? %>
+  <ul class="nav h-100 main-nav-bar">
+      
+      
+        <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
+         <%= link_to "리틀팜이란?", "/introduce", class: 'p-2 main-nav-bar-item main-nav-bar-category-button' %>
+         </li>
+         
+          <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
+         <%= link_to "재배일지", "/samplediary", class: 'p-2 main-nav-bar-item main-nav-bar-category-button' %>
+         </li>
+         
+          <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
+         <%= link_to "구매하기", "/t/categories/flower", class: 'p-2 main-nav-bar-item main-nav-bar-category-button' %>
+         </li>
+    
+ 
+  </ul>
+<% end %>
