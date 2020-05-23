@@ -18,11 +18,14 @@
 !/log/.keep
 !/tmp/.keep
 
+<<<<<<< HEAD
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
 
+=======
+>>>>>>> bf2e2a9872343e89ed05e107fb574df12170a94a
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
@@ -39,3 +42,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+<<<<<<< HEAD
+=======
+
+# Ignore application configuration
+/config/application.yml
+>>>>>>> bf2e2a9872343e89ed05e107fb574df12170a94a

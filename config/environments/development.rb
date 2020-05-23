@@ -60,14 +60,9 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
- config.hosts << "de92f7d99b7e4949bf5cd64e00f63f4b.vfs.cloud9.ap-northeast-2.amazonaws.com"
-  
-  
-  config.i18n.available_locales = :ko
-  
-  I18n.locale = :ko
-  
-  
+  config.hosts << "de92f7d99b7e4949bf5cd64e00f63f4b.vfs.cloud9.ap-northeast-2.amazonaws.com"  
+  #config.require_master_key = true
+
   
   
 end

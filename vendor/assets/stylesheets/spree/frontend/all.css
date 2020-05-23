@@ -6,7 +6,7 @@
  *= require spree/frontend
  *= require_self
  
-  *= require summernote/summernote-bs4.css
+ *= require summernote/summernote-bs4.css
  *= require_tree .
 */
 
